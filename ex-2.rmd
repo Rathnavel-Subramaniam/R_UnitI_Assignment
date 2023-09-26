@@ -1,0 +1,65 @@
+---
+title: "ex-2"
+author: "Vignesh"
+date: "24 September 2023"
+output: html_document
+---
+
+
+```{r include=FALSE}
+library(tidyverse)
+```
+
+
+1. What’s gone wrong with this code? Why are the points not blue?
+
+```{r}
+ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
+```
+
+**Solution:**
+  - 
+  
+
+2. Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?
+
+**Solution:**
+  
+```{r}
+```
+
+
+3. Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?
+
+**Solution:**
+
+```{r}
+
+```
+
+
+4. What happens if you map the same variable to multiple aesthetics?
+
+```{r}
+
+```
+
+
+5. What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)
+
+```{r}
+?geom_point
+```
+
+```{r}
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point(shape = 21, color = "black", fill = "white", size = 5, stroke = 5)
+```
+
+
+6. What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ < 5)?
+
+```{r}
+
+```
+
